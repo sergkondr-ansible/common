@@ -1,0 +1,46 @@
+---
+
+galaxy_info:
+  author: Sergey Kondrashov <s@kondrashov.me>
+  description: Setup base environment
+  min_ansible_version: 2.2
+  platforms:
+    - name: Ubuntu
+      versions:
+        - trusty
+        - xenial
+
+dependencies:
+  - src: git@github.com:sergkondr-ansible/hostname.git
+    name: hostname
+    path: roles
+    scm: git
+    version: master
+    when:
+      - ansible_virtualization_type != "docker"
+
+  - src: git@github.com:sergkondr-ansible/os_groups.git
+    name: os_groups
+    path: roles
+    scm: git
+    version: master
+
+  - src: git@github.com:sergkondr-ansible/os_users.git
+    name: os_users
+    path: roles
+    scm: git
+    version: master
+    os_users_default:
+      - name: 'root'
+        password: '$6$rounds=656000$P2qpikJI2o0H/RTv$jOQ5koeU4c1aV8i7F684V5C9vVqVnoK9ABmTM6C37uheW32NOQlyr66ftVEGHF0OBILs5fq/9dB5D.d8DyRZO1'
+      - name: 'skondrashov'
+        password: '$6$rounds=656000$P2qpikJI2o0H/RTv$jOQ5koeU4c1aV8i7F684V5C9vVqVnoK9ABmTM6C37uheW32NOQlyr66ftVEGHF0OBILs5fq/9dB5D.d8DyRZO1'
+        group: 'admin'
+      - name: 'vagrant'
+        state: 'absent'
+        remove: 'yes'
+        when: ( ansible_user is undefined ) or ( ansible_user id defined and ansible_user != "vagrant" )
+    os_users_keys_default:
+      - user: 'skondrashov'
+        exclusive: 'no'
+        key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD6vFlwG3ILxziFY1iEW6gsINlfQ474Jjj0ocpbLZdXw5IdToK+HPFkW8m+KAisw0R7YubsWJIuJUbPBdnh4ox1V2nkv+NPrj2zcc12rzisHYyUuqk7VuOl+Sq9spTxZckSCkJ3UdEMDYyiOFaaiSZdf346UGogeQxQPBntB7XRdN5LFJfjpXvRNNnSHwtRbfUpEUeMeCLxItdCs4jz1ktUVTM7dI7i0ARiM5UaxpLWo2R/A8WOAWORsOnXCUJELb+ilr+tKK8IzjVgvG8vrQwxRSMzlp+sWKjz888jKWbgY79hXz72v6q+5uTaDiRtvG/fAn54BubGHnjf9AFjHECfdMF/hhuUTz9MUd6J5Uz7yWsksBMWoZVIyFuTnBr9B7TIXi0ycPiydUmIFISWxU3NYro/hRIvQsrh4pwrvDh58LZDG8IRYFc+cMBUv3JyRb9/AQKzDNI2DhgRj0ygVDv5iIRwAUGgHEOS0Hx+lS6qFiNj0K73zOGvGjail964p80= skondrashov'

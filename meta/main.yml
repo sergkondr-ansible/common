@@ -36,10 +36,6 @@ dependencies:
       - name: 'skondrashov'
         password: '$6$rounds=656000$P2qpikJI2o0H/RTv$jOQ5koeU4c1aV8i7F684V5C9vVqVnoK9ABmTM6C37uheW32NOQlyr66ftVEGHF0OBILs5fq/9dB5D.d8DyRZO1'
         group: 'admin'
-      - name: 'vagrant'
-        state: 'absent'
-        remove: 'yes'
-        when: ( ansible_user is undefined ) or ( ansible_user id defined and ansible_user != "vagrant" )
     os_users_keys_default:
       - user: 'skondrashov'
         exclusive: 'no'

@@ -11,14 +11,6 @@ galaxy_info:
         - xenial
 
 dependencies:
-  - src: git@github.com:sergkondr-ansible/hostname.git
-    name: hostname
-    path: roles
-    scm: git
-    version: master
-    when:
-      - ansible_virtualization_type != "docker"
-
   - src: git@github.com:sergkondr-ansible/os_groups.git
     name: os_groups
     path: roles

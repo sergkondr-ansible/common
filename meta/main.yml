@@ -32,11 +32,14 @@ dependencies:
     version: master
     os_users_default:
       - name: 'root'
-        password: '$6$rounds=656000$P2qpikJI2o0H/RTv$jOQ5koeU4c1aV8i7F684V5C9vVqVnoK9ABmTM6C37uheW32NOQlyr66ftVEGHF0OBILs5fq/9dB5D.d8DyRZO1'
+        password: '$6$SVD53vqNDEJv$SvLXOKAaIrXY7HKZz6PMVjF7SnpBZX2jPYWXDv2I0InC0ECoIS8cspQDvr7YuagKSo/dgt3FQLpPyei5Q3.6y.'
       - name: 'skondrashov'
-        password: '$6$rounds=656000$P2qpikJI2o0H/RTv$jOQ5koeU4c1aV8i7F684V5C9vVqVnoK9ABmTM6C37uheW32NOQlyr66ftVEGHF0OBILs5fq/9dB5D.d8DyRZO1'
-        group: 'admin'
+        password: '$6$2mCGkM6TPYLC$dyo3UGysdHCHFJveFhjWAz.Tus/BdMU90KHdY4KAi1yfVyh7mQlh0AL2GFBytHY1lniXm6lxofIsVTKgKnKVh.'
+        group: 'sudo'
     os_users_keys_default:
       - user: 'skondrashov'
         exclusive: 'no'
         key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD6vFlwG3ILxziFY1iEW6gsINlfQ474Jjj0ocpbLZdXw5IdToK+HPFkW8m+KAisw0R7YubsWJIuJUbPBdnh4ox1V2nkv+NPrj2zcc12rzisHYyUuqk7VuOl+Sq9spTxZckSCkJ3UdEMDYyiOFaaiSZdf346UGogeQxQPBntB7XRdN5LFJfjpXvRNNnSHwtRbfUpEUeMeCLxItdCs4jz1ktUVTM7dI7i0ARiM5UaxpLWo2R/A8WOAWORsOnXCUJELb+ilr+tKK8IzjVgvG8vrQwxRSMzlp+sWKjz888jKWbgY79hXz72v6q+5uTaDiRtvG/fAn54BubGHnjf9AFjHECfdMF/hhuUTz9MUd6J5Uz7yWsksBMWoZVIyFuTnBr9B7TIXi0ycPiydUmIFISWxU3NYro/hRIvQsrh4pwrvDh58LZDG8IRYFc+cMBUv3JyRb9/AQKzDNI2DhgRj0ygVDv5iIRwAUGgHEOS0Hx+lS6qFiNj0K73zOGvGjail964p80= skondrashov'
+      - user: 'skondrashov'
+        exclusive: 'no'
+        key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCsFaEEq8pD99EA2ClrmNzCL5OYqySqtSyP46G++A0dNptbsrD3vWfm4WLrg/H/oC3Bm5yz11pREqyOrX28hSpy00YnIU82MP/2e9hfTfLWl93O64shbPk/subOMRBsELoyapD0FsSl6xNRxQ9wO6227zYGfnWmDD4tjLm7h/t1aPsV0g8+ON5ANrgpA4uiIc6rudGN/KIcrYJQ4XDRfqjOkvz8tB65knt5lH9N7cQYCh7PW8wM/30vlq6/XWjwou08smcy79B+nlT6mXuKii0yV0VHRbkruqQoc67MqVqXO24apj+5L3qd979Z1ywvyaMrJCUefFDvE925sZdPa6ebcXxH9eVF3dbBwaiL2hWev8uD/+Iyc3Z0HlARbutkJ7tOxkLi4XDLHe99ecW8ZJTPbxU4AxlacILZozR0Yc82SM+06NBqF0gk3PA9V5x50Vuk+zyZC1zNHrCHahHriKARLHwjpRMXHPvYsqxNNlJkq0HgnVRGlJIJLgHEquEW80pJ9isOPga+P93t9XCQ5HlYORKk83QY2h537wr28TI+MihkkbAv5ND//iHzcwF8Mh4PU/HigD0kgH+nYS3T9EJsMuE8UCn/AJHTbPdbR/9qve4Bpwh5MTRMah1FLJsQpkNPvb12fLQbcN9D0b5Kc8C34hkmXnfulPubvS9CmdOfgQ== skondrashov'
